@@ -1,0 +1,21 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/api/lyrics"
+  to = "/.netlify/functions/lyrics"
+  status = 200
+
+[[redirects]]
+  from = "/api/youtube-search"
+  to = "/.netlify/functions/youtube-search"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
